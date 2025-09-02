@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Embedded Content</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <iframe
+    src="https://script.google.com/macros/s/AKfycbx5s4gNbueibQTYdcY9FElBYoNap9khYXAglqYOjQxdHZ38BEjx_h-eN-Lo3G4M1CPaRA/exec"
+    width="100%"
+    height="100%"
+    allowfullscreen="true"
+    frameborder="0"
+    style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+  </iframe>
+
+  <script>
+    window.onload = function() {
+      const iframe = document.querySelector('iframe');
+      if (iframe) {
+        iframe.requestFullscreen().catch(err => {
+          console.error(`Error attempting to enable full-screen mode: ${err.message}`);
+        });
+      }
+    };
+  </script>
+
+</body>
+</html>
